@@ -1,0 +1,16 @@
+def selectionSort(mylist):
+    i=0 
+    l = len(mylist)
+    while (i<len(mylist)):
+        minimum = max(mylist[i:l])
+        for j in range(i,l):
+            if (mylist[j]<minimum):
+                minimum = mylist[j]
+                index = j
+        mylist[index]=mylist[i]
+        mylist[i]=minimum
+        i=i+1
+    return mylist
+
+mylist = [3,2,1,5,4]
+selectionSort(mylist)
